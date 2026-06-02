@@ -1,6 +1,8 @@
-/* Keep the page clean and compact */
+/* Custom styling for a cleaner academic homepage */
+
+/* Page header */
 #header {
-	padding: 2em 0 0.5em 0;
+	padding: 1.5em 0 0.5em 0;
 }
 
 .site-header {
@@ -8,16 +10,18 @@
 }
 
 #logo {
-	font-size: 2rem;
+	font-size: 1.9rem;
+	font-weight: 700;
+	letter-spacing: 0.01em;
 }
 
 .site-subtitle {
 	margin-top: 0.35em;
 	font-size: 0.95em;
-	opacity: 0.85;
+	opacity: 0.8;
 }
 
-/* Top navigation */
+/* Main navigation */
 #nav {
 	background: rgba(255, 255, 255, 0.98);
 	border-top: 1px solid rgba(0, 0, 0, 0.08);
@@ -34,7 +38,7 @@
 	flex-wrap: wrap;
 	gap: 0.25rem 1rem;
 	margin: 0;
-	padding: 0.75rem 1rem;
+	padding: 0.7rem 1rem;
 	list-style: none;
 }
 
@@ -49,62 +53,105 @@
 	letter-spacing: 0.01em;
 }
 
-#nav li.lang-toggle {
-	margin-left: 0.5rem;
+#nav a:hover {
+	text-decoration: underline;
 }
 
 #nav li.lang-toggle a {
-	padding: 0.35rem 0.7rem;
+	padding: 0.3rem 0.7rem;
 	border-radius: 999px;
-	background: #f2f2f2;
+	background: #f3f3f3;
 }
 
 #nav li.lang-toggle a:hover {
-	background: #e6e6e6;
+	background: #e8e8e8;
+	text-decoration: none;
 }
 
-/* Main intro */
+/* Intro section */
 .hero-wrap {
-	max-width: 1100px;
+	max-width: 1000px;
 	margin: 0 auto;
-	padding: 2.25em 1.5em 1.5em 1.5em;
+	padding: 1.75em 1.5em 1.25em 1.5em;
 }
 
 .hero-grid {
 	display: grid;
-	grid-template-columns: 300px 1fr;
-	gap: 2rem;
+	grid-template-columns: 180px 1fr;
+	gap: 1.5rem;
 	align-items: start;
+}
+
+.hero-photo {
+	max-width: 180px;
 }
 
 .profile-photo {
 	width: 100%;
 	height: auto;
 	display: block;
-	border-radius: 14px;
+	border-radius: 10px;
+	box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
 
 .hero-bio p {
-	margin: 0 0 0.9em 0;
-	line-height: 1.65;
+	margin: 0 0 0.8em 0;
+	line-height: 1.62;
+	font-size: 1rem;
 }
 
 .bio-lead {
-	font-size: 1.05em;
+	font-size: 1.03rem;
 }
 
-/* Footer cleanup */
+/* Make the bio feel more academic and compact */
+.hero-bio hr {
+	margin: 1rem 0;
+	opacity: 0.45;
+}
+
+/* Optional section spacing if you keep the feature cards */
+#features {
+	padding-top: 0.5em;
+}
+
+#features .image.featured img {
+	border-radius: 10px;
+}
+
+/* Footer */
 .contact-compact ul {
 	margin-bottom: 0;
 }
 
 .contact-compact li {
-	margin-bottom: 1.2em;
+	margin-bottom: 1.1em;
 }
 
+.contact-compact p {
+	margin-bottom: 0.4em;
+	line-height: 1.55;
+}
+
+.copyright {
+	margin-top: 1.25em;
+}
+
+/* Subtle spacing polish */
+.wrapper.style1,
+.wrapper.style2 {
+	padding-top: 2em;
+	padding-bottom: 2em;
+}
+
+/* Responsive layout */
 @media (max-width: 980px) {
 	.hero-grid {
 		grid-template-columns: 1fr;
+	}
+
+	.hero-photo {
+		max-width: 220px;
 	}
 
 	#logo {
@@ -114,18 +161,37 @@
 
 @media (max-width: 736px) {
 	#header {
-		padding-top: 1.5em;
+		padding-top: 1.2em;
 	}
 
 	#nav ul {
 		gap: 0.25rem 0.75rem;
 	}
 
+	.hero-wrap {
+		padding: 1.3em 1.1em 1em 1.1em;
+	}
+
+	.hero-grid {
+		gap: 1rem;
+	}
+
+	.hero-photo {
+		max-width: 170px;
+		margin: 0 auto;
+	}
+}
+
+@media (max-width: 480px) {
+	#nav ul {
+		gap: 0.2rem 0.6rem;
+	}
+
 	#nav li.lang-toggle {
 		margin-left: 0;
 	}
 
-	.hero-wrap {
-		padding-top: 1.5em;
+	.hero-photo {
+		max-width: 150px;
 	}
 }
