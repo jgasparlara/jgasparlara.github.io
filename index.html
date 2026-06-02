@@ -16,27 +16,34 @@
 
 		<style>
 			:root {
-				--content-max: 1100px;
+				--page-max: 1100px;
 			}
 
-			/* Keep the page compact and avoid unnecessary vertical space */
-			#banner {
-				padding: 4em 0 2.5em 0;
+			/* Keep the top compact */
+			#header {
+				padding-bottom: 0;
 			}
 
-			#banner h2 {
-				margin-bottom: 0.25em;
+			#logo {
+				font-size: 2rem;
 			}
 
-			.about-wrap {
-				max-width: var(--content-max);
+			.site-subtitle {
+				margin-top: 0.35em;
+				font-size: 0.95em;
+				opacity: 0.85;
+			}
+
+			/* Hero / bio area */
+			.hero-wrap {
+				max-width: var(--page-max);
 				margin: 0 auto;
-				padding: 0 1.5em;
+				padding: 2.5em 1.5em 1.5em 1.5em;
 			}
 
-			.about-grid {
+			.hero-grid {
 				display: grid;
-				grid-template-columns: 320px 1fr;
+				grid-template-columns: 280px 1fr;
 				gap: 2rem;
 				align-items: start;
 			}
@@ -44,52 +51,103 @@
 			.profile-photo {
 				width: 100%;
 				height: auto;
-				border-radius: 12px;
 				display: block;
+				border-radius: 14px;
 			}
 
-			.about-text p {
-				margin-bottom: 0.9em;
+			.hero-bio p {
+				margin: 0 0 0.9em 0;
 			}
 
-			.lang-label {
-				font-size: 0.9em;
+			.bio-lead {
+				font-size: 1.05em;
+				line-height: 1.6;
+			}
+
+			/* Language cards */
+			.lang-section {
+				max-width: var(--page-max);
+				margin: 0 auto;
+				padding: 0 1.5em 2.5em 1.5em;
+			}
+
+			.lang-heading {
+				text-align: center;
+				margin-bottom: 1rem;
+				font-size: 1rem;
 				letter-spacing: 0.08em;
 				text-transform: uppercase;
-				opacity: 0.75;
-				margin-bottom: 0.5em;
+				opacity: 0.8;
 			}
 
+			.lang-grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 1rem;
+			}
+
+			.lang-card {
+				display: block;
+				padding: 1.25rem 1.4rem;
+				border-radius: 14px;
+				background: rgba(255, 255, 255, 0.95);
+				text-decoration: none;
+				color: inherit;
+				text-align: center;
+				box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+				transition: transform 0.15s ease, box-shadow 0.15s ease;
+			}
+
+			.lang-card:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
+			}
+
+			.lang-title {
+				display: block;
+				font-size: 1.4rem;
+				font-weight: 700;
+				margin-bottom: 0.25rem;
+			}
+
+			.lang-text {
+				display: block;
+				font-size: 0.95rem;
+				opacity: 0.8;
+			}
+
+			/* Feature cards */
 			.feature-title {
-				margin-top: 0.5em;
-				margin-bottom: 0;
+				margin-top: 0.6rem;
+				margin-bottom: 0.15rem;
 			}
 
 			.feature-subtitle {
-				font-size: 0.95em;
+				margin-top: 0;
+				font-size: 0.95rem;
 				opacity: 0.8;
-				margin-top: 0.2em;
 			}
 
 			#features .image.featured img {
-				border-radius: 10px;
+				border-radius: 12px;
 			}
 
+			/* Footer */
 			.contact-compact ul {
 				margin-bottom: 0;
 			}
 
 			.contact-compact li {
-				margin-bottom: 1.25em;
+				margin-bottom: 1.2em;
 			}
 
 			@media (max-width: 980px) {
-				.about-grid {
+				.hero-grid {
 					grid-template-columns: 1fr;
 				}
 
-				#banner {
-					padding: 3em 0 2em 0;
+				.lang-grid {
+					grid-template-columns: 1fr;
 				}
 			}
 		</style>
@@ -99,87 +157,82 @@
 		<div id="page-wrapper">
 
 			<!-- Header -->
-			<div id="header" class="top-header">
-	<div class="inner">
-		<header>
-			<h1><a href="index.html" id="logo">Jorge Gaspar Lara</a></h1>
-			<p class="subtitle">Graduate student in mathematics · Estudiante de posgrado en matemáticas</p>
-		</header>
+			<div id="header">
+				<div class="inner">
+					<header>
+						<h1><a href="index.html" id="logo">Jorge Gaspar Lara</a></h1>
+						<p class="site-subtitle">Graduate student in mathematics · Estudiante de posgrado en matemáticas</p>
+					</header>
+				</div>
+			</div>
 
-		<nav class="lang-nav" aria-label="Language navigation">
-			<a href="#english" class="lang-box">
-				<span class="lang-title">English</span>
-				<span class="lang-text">Research, teaching, and more</span>
-			</a>
-
-			<a href="#spanish" class="lang-box">
-				<span class="lang-title">Español</span>
-				<span class="lang-text">Investigación, enseñanza y más</span>
-			</a>
-		</nav>
-	</div>
-</div>
-
-<section id="banner" class="hero-strip">
-	<div class="hero-strip-overlay"></div>
-</section>
-
-			<!-- Main -->
+			<!-- Main intro -->
 			<div class="wrapper style2">
-				<article id="main" class="container special about-wrap">
-					<div class="about-grid">
+				<article class="container special hero-wrap">
+					<div class="hero-grid">
 						<div>
-							<img
-								src="images/pic06.jpg"
-								alt="Portrait of Jorge Gaspar Lara"
-								class="profile-photo"
-							/>
+							<img src="images/pic06.jpg" alt="Portrait of Jorge Gaspar Lara" class="profile-photo" />
 						</div>
 
-						<div class="about-text">
-							<div>
-								<div class="lang-label">English</div>
-								<p>
-									I am a third-year graduate student at the University of Utah. My advisors are
-									<a href="https://www.math.utah.edu/~iyengar/">Srikanth Iyengar</a> and
-									<a href="https://sites.google.com/view/skippermath">Rachel Skipper</a>.
-								</p>
-								<p>
-									I earned my master's degree at <a href="https://www.cimat.mx/">CIMAT</a> under the supervision of Pedro Luis del Ángel Rodríguez.
-								</p>
-								<p>
-									My research interests are commutative algebra, homological algebra, and representation theory.
-								</p>
-								<p>
-									I also co-organize the student Commutative Algebra Seminar
-									<a href="https://bagels-bikes.github.io/bikes/">(BIKES)</a> at the University of Utah with
-									<a href="https://emorg.github.io/">Ethan Morgan</a>.
-								</p>
-							</div>
+						<div class="hero-bio">
+							<p class="bio-lead">
+								Hi. I am a third-year graduate student at the University of Utah.
+								My advisors are <a href="https://www.math.utah.edu/~iyengar/">Srikanth Iyengar</a>
+								and <a href="https://sites.google.com/view/skippermath">Rachel Skipper</a>.
+							</p>
+							<p>
+								I finished my master's degree at <a href="https://www.cimat.mx/">CIMAT</a>
+								under the supervision of Pedro Luis del Ángel Rodríguez.
+							</p>
+							<p>
+								My research interests are commutative algebra, homological algebra, and representation theory.
+							</p>
+							<p>
+								I also co-organize the student Commutative Algebra Seminar
+								<a href="https://bagels-bikes.github.io/bikes/">(BIKES)</a>
+								at the University of Utah with <a href="https://emorg.github.io/">Ethan Morgan</a>.
+							</p>
 
 							<hr />
 
-							<div lang="es">
-								<div class="lang-label">Español</div>
-								<p>
-									Soy un estudiante de posgrado de tercer año en la Universidad de Utah. Mis asesores son
-									<a href="https://www.math.utah.edu/~iyengar/">Srikanth Iyengar</a> y
-									<a href="https://sites.google.com/view/skippermath">Rachel Skipper</a>.
-								</p>
-								<p>
-									Terminé mi Maestría en Ciencias en <a href="https://www.cimat.mx/">CIMAT</a> bajo la supervisión de Pedro Luis del Ángel Rodríguez.
-								</p>
-								<p>
-									Mis intereses de investigación son álgebra conmutativa, álgebra homológica y teoría de representaciones.
-								</p>
-								<p>
-									Además, Ethan Morgan y yo organizamos el Seminario de Álgebra Conmutativa de estudiantes
-									<a href="https://bagels-bikes.github.io/bikes/">(BIKES)</a> en la Universidad de Utah.
-								</p>
-							</div>
+							<p lang="es" class="bio-lead">
+								Hola. Soy un estudiante de posgrado de tercer año en la Universidad de Utah.
+								Mis asesores son <a href="https://www.math.utah.edu/~iyengar/">Srikanth Iyengar</a>
+								y <a href="https://sites.google.com/view/skippermath">Rachel Skipper</a>.
+							</p>
+							<p lang="es">
+								Terminé mi Maestría en Ciencias en <a href="https://www.cimat.mx/">CIMAT</a>
+								bajo la supervisión de Pedro Luis del Ángel Rodríguez.
+							</p>
+							<p lang="es">
+								Mis intereses de investigación son álgebra conmutativa, álgebra homológica y teoría de representaciones.
+							</p>
+							<p lang="es">
+								Además, Ethan Morgan y yo organizamos el Seminario de Álgebra Conmutativa de estudiantes
+								<a href="https://bagels-bikes.github.io/bikes/">(BIKES)</a>
+								en la Universidad de Utah.
+							</p>
 						</div>
 					</div>
 				</article>
+			</div>
+
+			<!-- Language navigation -->
+			<div class="wrapper style1">
+				<section class="lang-section">
+					<div class="lang-heading">Choose a language</div>
+					<div class="lang-grid">
+						<a href="research.html" class="lang-card">
+							<span class="lang-title">English</span>
+							<span class="lang-text">Research, teaching, and miscellaneous pages</span>
+						</a>
+
+						<a href="investigacion.html" class="lang-card">
+							<span class="lang-title">Español</span>
+							<span class="lang-text">Investigación, enseñanza y otras cosas</span>
+						</a>
+					</div>
+				</section>
 			</div>
 
 			<!-- Features -->
@@ -274,8 +327,3 @@
 
 	</body>
 </html>
-					
-
-
-
-
