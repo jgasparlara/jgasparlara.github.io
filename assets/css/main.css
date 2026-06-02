@@ -3137,5 +3137,11 @@ input, select, textarea {
 					.carousel article .image {
 						margin-bottom: 2em;
 					}
-
+		.profile-photo {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
 	}
