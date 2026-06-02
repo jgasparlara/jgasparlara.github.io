@@ -1,6 +1,6 @@
 /*
 	Custom styles for Jorge Gaspar Lara's site
-	Compact academic layout, accessible colors, no large header image.
+	Centered navigation, compact academic layout, accessible colors.
 */
 
 :root {
@@ -56,8 +56,6 @@ button:focus-visible,
 .button:focus-visible,
 .site-nav a:focus,
 .site-nav a:focus-visible,
-.lang-card:focus,
-.lang-card:focus-visible,
 .skip-link:focus,
 .skip-link:focus-visible {
 	outline: 3px solid var(--accent);
@@ -92,25 +90,19 @@ button:focus-visible,
 .site-topbar {
 	background: var(--nav-bg);
 	border-bottom: 1px solid var(--border);
-	position: sticky;
-	top: 0;
-	z-index: 1000;
-	backdrop-filter: blur(4px);
-	-webkit-backdrop-filter: blur(4px);
+	padding: 1rem 0 0.75rem 0;
 }
 
 .site-topbar-inner {
 	max-width: 1100px;
 	margin: 0 auto;
-	padding: 0.9rem 1.25rem;
-	display: flex;
-	gap: 1rem;
-	align-items: center;
-	justify-content: space-between;
+	padding: 0 1.25rem;
+	display: block;
+	text-align: center;
 }
 
 .site-brand {
-	min-width: 0;
+	margin-bottom: 0.85rem;
 }
 
 .site-name {
@@ -137,7 +129,7 @@ button:focus-visible,
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-	justify-content: flex-end;
+	justify-content: center;
 	gap: 0.25rem 0.75rem;
 	list-style: none;
 	margin: 0;
@@ -194,28 +186,32 @@ button:focus-visible,
 }
 
 .content-wrap {
-	max-width: 1040px;
+	max-width: 980px;
 	margin: 0 auto;
 	padding: 1.8rem 1.25rem 1.25rem 1.25rem;
 }
 
 .bio-grid {
-	display: grid;
-	grid-template-columns: 170px 1fr;
-	gap: 1.5rem;
-	align-items: start;
+	display: flex;
+	align-items: flex-start;
+	gap: 2rem;
 }
 
 .photo-col {
-	max-width: 170px;
+	flex: 0 0 155px;
 }
 
 .profile-photo {
-	width: 100%;
+	width: 155px;
 	height: auto;
 	display: block;
 	border-radius: 10px;
 	box-shadow: var(--shadow);
+}
+
+.bio-text {
+	flex: 1;
+	min-width: 0;
 }
 
 .bio-text p {
@@ -288,36 +284,31 @@ button:focus-visible,
 /* Responsive */
 @media screen and (max-width: 980px) {
 	.site-topbar-inner {
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-	}
-
-	.site-nav ul {
-		justify-content: center;
-	}
-
-	.bio-grid {
-		grid-template-columns: 1fr;
-	}
-
-	.photo-col {
-		max-width: 180px;
-		margin: 0 auto;
+		padding: 0 1rem;
 	}
 
 	.site-name {
 		font-size: 1.35rem;
 	}
+
+	.bio-grid {
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.photo-col {
+		flex: 0 0 auto;
+	}
+
+	.profile-photo {
+		width: 170px;
+	}
 }
 
 @media screen and (max-width: 736px) {
-	.site-topbar-inner {
-		padding: 0.8rem 0.9rem;
-	}
-
-	.site-nav ul {
-		gap: 0.2rem 0.5rem;
+	.site-topbar {
+		padding: 0.85rem 0 0.7rem 0;
 	}
 
 	.site-nav a {
@@ -329,16 +320,8 @@ button:focus-visible,
 		padding: 1.2rem 1rem 1rem 1rem;
 	}
 
-	.bio-grid {
-		gap: 1rem;
-	}
-
-	.photo-col {
-		max-width: 150px;
-	}
-
-	.site-name {
-		font-size: 1.25rem;
+	.profile-photo {
+		width: 145px;
 	}
 }
 
@@ -351,7 +334,7 @@ button:focus-visible,
 		padding: 0.28rem 0.55rem;
 	}
 
-	.photo-col {
-		max-width: 135px;
+	.profile-photo {
+		width: 135px;
 	}
 }
