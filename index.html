@@ -4,376 +4,298 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html>
+<html lang="en">
 	<head>
-		<title>Jorge Gaspar-Lara</title>
+		<title>Jorge Gaspar Lara</title>
 		<link rel="icon" type="image/x-icon" href="images/icon.ico">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Homepage of Jorge Gaspar Lara, graduate student in mathematics at the University of Utah." />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<style>
+			:root {
+				--content-max: 1100px;
+			}
+
+			/* Keep the page compact and avoid unnecessary vertical space */
+			#banner {
+				padding: 4em 0 2.5em 0;
+			}
+
+			#banner h2 {
+				margin-bottom: 0.25em;
+			}
+
+			.about-wrap {
+				max-width: var(--content-max);
+				margin: 0 auto;
+				padding: 0 1.5em;
+			}
+
+			.about-grid {
+				display: grid;
+				grid-template-columns: 320px 1fr;
+				gap: 2rem;
+				align-items: start;
+			}
+
+			.profile-photo {
+				width: 100%;
+				height: auto;
+				border-radius: 12px;
+				display: block;
+			}
+
+			.about-text p {
+				margin-bottom: 0.9em;
+			}
+
+			.lang-label {
+				font-size: 0.9em;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+				opacity: 0.75;
+				margin-bottom: 0.5em;
+			}
+
+			.feature-title {
+				margin-top: 0.5em;
+				margin-bottom: 0;
+			}
+
+			.feature-subtitle {
+				font-size: 0.95em;
+				opacity: 0.8;
+				margin-top: 0.2em;
+			}
+
+			#features .image.featured img {
+				border-radius: 10px;
+			}
+
+			.contact-compact ul {
+				margin-bottom: 0;
+			}
+
+			.contact-compact li {
+				margin-bottom: 1.25em;
+			}
+
+			@media (max-width: 980px) {
+				.about-grid {
+					grid-template-columns: 1fr;
+				}
+
+				#banner {
+					padding: 3em 0 2em 0;
+				}
+			}
+		</style>
 	</head>
+
 	<body class="homepage is-preload">
 		<div id="page-wrapper">
 
 			<!-- Header -->
-				<div id="header">
+			<div id="header">
 
-					<!-- Inner -->
-						<div class="inner">
-							<header>
-								<h1><a href="index.html" id="logo">Jorge Gaspar Lara</a></h1>
-								<hr />
-							</header>
-							<footer>
-								<a href="#banner" class="button circled scrolly">About Me</a>
-							</footer>
-						</div>
-
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="index.html">Home</a></li>
-								<li>
-									<a href="#">English</a>
-									<ul>
-										<li><a href="research.html">Research</a></li>
-										<li><a href="teaching.html">Teaching</a></li>
-										<li><a href="miscellaneous.html">Miscellaneous</a></li>
-									</ul>
-								</li>
-								<li>
-									<a href="#">Español</a>
-									<ul>
-										<li><a href="investigacion.html">Investigación</a></li>
-										<li><a href="ensenanza.html">Enseñanza</a></li>
-										<li><a href="otracosa.html">Otras cosas</a></li>
-									</ul>
-								</li>
-							</ul>
-						</nav>
-
+				<!-- Inner -->
+				<div class="inner">
+					<header>
+						<h1><a href="index.html" id="logo">Jorge Gaspar Lara</a></h1>
+						<hr />
+					</header>
+					<footer>
+						<a href="#banner" class="button circled scrolly">About Me</a>
+					</footer>
 				</div>
+
+				<!-- Nav -->
+				<nav id="nav" aria-label="Main navigation">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li>
+							<a href="#">English</a>
+							<ul>
+								<li><a href="research.html">Research</a></li>
+								<li><a href="teaching.html">Teaching</a></li>
+								<li><a href="miscellaneous.html">Miscellaneous</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Español</a>
+							<ul>
+								<li><a href="investigacion.html">Investigación</a></li>
+								<li><a href="ensenanza.html">Enseñanza</a></li>
+								<li><a href="otracosa.html">Otras cosas</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+
+			</div>
 
 			<!-- Banner -->
-				<section id="banner">
-					<header>
-						<h2>Hi. My name is Jorge Eduardo Gaspar Lara.</h2>
-					</header>
-				</section>
-
-			<!-- Carousel -->
-				<!-- <section class="carousel">
-					<div class="reel">
-
-						<article>
-							<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Pulvinar sagittis congue</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-						</article>
-
-						<article>
-							<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Fermentum sagittis proin</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-						</article>
-
-						<article>
-							<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Sed quis rhoncus placerat</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-						</article>
-
-						<article>
-							<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Ultrices urna sit lobortis</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-						</article>
-
-						<article>
-							<a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Varius magnis sollicitudin</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-						</article>
-
-						<article>
-							<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Pulvinar sagittis congue</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-						</article>
-
-						<article>
-							<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Fermentum sagittis proin</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-						</article>
-
-						<article>
-							<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Sed quis rhoncus placerat</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-						</article>
-
-						<article>
-							<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Ultrices urna sit lobortis</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-						</article>
-
-						<article>
-							<a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Varius magnis sollicitudin</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-						</article>
-
-					</div>
-				</section> -->
+			<section id="banner">
+				<header>
+					<h2>Hi. My name is Jorge Eduardo Gaspar Lara.</h2>
+					<p>Graduate student in mathematics at the University of Utah.</p>
+				</header>
+			</section>
 
 			<!-- Main -->
-				<div class="wrapper style2">
+			<div class="wrapper style2">
+				<article id="main" class="container special about-wrap">
+					<div class="about-grid">
+						<div>
+							<img
+								src="images/pic06.jpg"
+								alt="Portrait of Jorge Gaspar Lara"
+								class="profile-photo"
+							/>
+						</div>
 
-					<article id="main" class="container special">
-						<header>
-							<a href="#" class="image"><img src="images/pic06.jpg" alt="Portrait of Jorge Gaspar Lara" class="profile-photo" /></a>
-							<p>
-								I am currently a third-year graduate student at the University of Utah. My advisors are <a href="https://www.math.utah.edu/~iyengar/">Srikanth Iyengar</a> and <a href="https://sites.google.com/view/skippermath">Rachel Skipper</a>.
-								<br> I finished my Master's Degree in Science at <a href="https://www.cimat.mx/">CIMAT</a> under the supervision of Pedro Luis del Ángel Rodríguez.
-								<br> My research interests are in commutative algebra, homological algebra and representation theory.
-								<br> I am currently co-organizing the student Commutative Algebra Student Seminar <a href="https://bagels-bikes.github.io/bikes/">(BIKES)</a> at the University of Utah with <a href="https://emorg.github.io/">Ethan Morgan</a>.
-							</p>
+						<div class="about-text">
+							<div>
+								<div class="lang-label">English</div>
+								<p>
+									I am a third-year graduate student at the University of Utah. My advisors are
+									<a href="https://www.math.utah.edu/~iyengar/">Srikanth Iyengar</a> and
+									<a href="https://sites.google.com/view/skippermath">Rachel Skipper</a>.
+								</p>
+								<p>
+									I earned my master's degree at <a href="https://www.cimat.mx/">CIMAT</a> under the supervision of Pedro Luis del Ángel Rodríguez.
+								</p>
+								<p>
+									My research interests are commutative algebra, homological algebra, and representation theory.
+								</p>
+								<p>
+									I also co-organize the student Commutative Algebra Seminar
+									<a href="https://bagels-bikes.github.io/bikes/">(BIKES)</a> at the University of Utah with
+									<a href="https://emorg.github.io/">Ethan Morgan</a>.
+								</p>
+							</div>
+
 							<hr />
-							<p>
-								Actualmente soy un estudiante de posgrado de tercer año en Universidad de Utah. 
-								<br> Mis asesores son <a href="https://www.math.utah.edu/~iyengar/">Srikanth Iyengar</a> y <a href="https://sites.google.com/view/skippermath">Rachel Skipper</a>.
-								<br> Terminé mi Maestría en Ciencias en <a href="https://www.cimat.mx/">CIMAT</a> bajo la supervisión de Pedro Luis del Ángel Rodríguez.
-								<br> Mis intereses de investigación son álgebra conmutativa, álgebra homológica y teoría de representaciones.
-								<br> Actualmente, <a href="https://emorg.github.io/">Ethan Morgan</a> y yo somos los organizadores del Seminario de Álgebra Conmutativa de estudiantes <a href="https://bagels-bikes.github.io/bikes/">(BIKES)</a> en la Universidad de Utah.
-							</p>
-						</header>
-					</article>
 
-				</div>
+							<div lang="es">
+								<div class="lang-label">Español</div>
+								<p>
+									Soy un estudiante de posgrado de tercer año en la Universidad de Utah. Mis asesores son
+									<a href="https://www.math.utah.edu/~iyengar/">Srikanth Iyengar</a> y
+									<a href="https://sites.google.com/view/skippermath">Rachel Skipper</a>.
+								</p>
+								<p>
+									Terminé mi Maestría en Ciencias en <a href="https://www.cimat.mx/">CIMAT</a> bajo la supervisión de Pedro Luis del Ángel Rodríguez.
+								</p>
+								<p>
+									Mis intereses de investigación son álgebra conmutativa, álgebra homológica y teoría de representaciones.
+								</p>
+								<p>
+									Además, Ethan Morgan y yo organizamos el Seminario de Álgebra Conmutativa de estudiantes
+									<a href="https://bagels-bikes.github.io/bikes/">(BIKES)</a> en la Universidad de Utah.
+								</p>
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
 
 			<!-- Features -->
-				<div class="wrapper style1">
+			<div class="wrapper style1">
+				<section id="features" class="container special">
+					<div class="row">
+						<article class="col-4 col-12-mobile special">
+							<a href="research.html" class="image featured"><img src="images/pic17.png" alt="Research" /></a>
+							<header>
+								<h3 class="feature-title"><a href="research.html">Research</a></h3>
+								<p class="feature-subtitle">Investigación</p>
+							</header>
+						</article>
 
-					<section id="features" class="container special">
-						<div class="row">
-							<article class="col-3 col-12-mobile special">
-								<a href="research.html" class="image featured"><img src="images/pic17.png" alt="" /></a>
-								<header>
-									<h3><a href="research.html">Research</a></h3>
-									<h3><a href="investigacion.html">Investigación</a></h3>
-								</header>
-							</article>
-							<article class="col-3 col-12-mobile special">
-								<a href="teaching.html" class="image featured"><img src="images/pic18.png" alt="" /></a>
-								<header>
-									<h3><a href="teaching.html">Teaching</a></h3>
-									<h3><a href="ensenanza.html">Enseñanza</a></h3>
-								</header>
-							</article>
-							<article class="col-3 col-12-mobile special">
-								<a href="micellaneous.html" class="image featured"><img src="images/pic20.png" alt="" /></a>
-								<header>
-									<h3><a href="micellaneous.html">Micellaneous</a></h3>
-									<h3><a href="otracosa.html">Otras cosas</a></h3>
-								</header>
-							</article>
-						</div>
-					</section>
+						<article class="col-4 col-12-mobile special">
+							<a href="teaching.html" class="image featured"><img src="images/pic18.png" alt="Teaching" /></a>
+							<header>
+								<h3 class="feature-title"><a href="teaching.html">Teaching</a></h3>
+								<p class="feature-subtitle">Enseñanza</p>
+							</header>
+						</article>
 
-				</div>
+						<article class="col-4 col-12-mobile special">
+							<a href="miscellaneous.html" class="image featured"><img src="images/pic20.png" alt="Miscellaneous" /></a>
+							<header>
+								<h3 class="feature-title"><a href="miscellaneous.html">Miscellaneous</a></h3>
+								<p class="feature-subtitle">Otras cosas</p>
+							</header>
+						</article>
+					</div>
+				</section>
+			</div>
 
 			<!-- Footer -->
-				<div id="footer">
-					<div class="container">
-						<!-- <div class="row"> -->
+			<div id="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
 
-							<!-- Tweets -->
-								<!-- <section class="col-4 col-12-mobile">
-									<header>
-										<h2 class="icon brands fa-twitter circled"><span class="label">Tweets</span></h2>
-									</header>
-									<ul class="divided">
-										<li>
-											<article class="tweet">
-												Amet nullam fringilla nibh nulla convallis tique ante sociis accumsan.
-												<span class="timestamp">5 minutes ago</span>
-											</article>
-										</li>
-										<li>
-											<article class="tweet">
-												Hendrerit rutrum quisque.
-												<span class="timestamp">30 minutes ago</span>
-											</article>
-										</li>
-										<li>
-											<article class="tweet">
-												Curabitur donec nulla massa laoreet nibh. Lorem praesent montes.
-												<span class="timestamp">3 hours ago</span>
-											</article>
-										</li>
-										<li>
-											<article class="tweet">
-												Lacus natoque cras rhoncus curae dignissim ultricies. Convallis orci aliquet.
-												<span class="timestamp">5 hours ago</span>
-											</article>
-										</li>
-									</ul>
-								</section> -->
+							<section class="contact contact-compact">
+								<header>
+									<h3>Contact Information</h3>
+								</header>
+								<ul>
+									<li>
+										<h3>Address</h3>
+										<p>
+											Jorge Eduardo Gaspar Lara <br>
+											Department of Mathematics <br>
+											155 South 1400 East, LCB Loft <br>
+											University of Utah <br>
+											Salt Lake City, UT 84112-0090
+										</p>
+									</li>
+									<li>
+										<h3>E-mail</h3>
+										<p>j dot gaspar at utah dot edu</p>
+									</li>
+								</ul>
+								<ul class="icons">
+									<li>
+										<a href="https://www.linkedin.com/in/jorge-eduardo-gaspar-lara-98653225b/" class="icon brands fa-linkedin-in">
+											<span class="label">LinkedIn</span>
+										</a>
+									</li>
+								</ul>
+							</section>
 
-							<!-- Posts -->
-								<!-- <section class="col-4 col-12-mobile">
-									<header>
-										<h2 class="icon solid fa-file circled"><span class="label">Posts</span></h2>
-									</header>
-									<ul class="divided">
-										<li>
-											<article class="post stub">
-												<header>
-													<h3><a href="#">Nisl fermentum integer</a></h3>
-												</header>
-												<span class="timestamp">3 hours ago</span>
-											</article>
-										</li>
-										<li>
-											<article class="post stub">
-												<header>
-													<h3><a href="#">Phasellus portitor lorem</a></h3>
-												</header>
-												<span class="timestamp">6 hours ago</span>
-											</article>
-										</li>
-										<li>
-											<article class="post stub">
-												<header>
-													<h3><a href="#">Magna tempus consequat</a></h3>
-												</header>
-												<span class="timestamp">Yesterday</span>
-											</article>
-										</li>
-										<li>
-											<article class="post stub">
-												<header>
-													<h3><a href="#">Feugiat lorem ipsum</a></h3>
-												</header>
-												<span class="timestamp">2 days ago</span>
-											</article>
-										</li>
-									</ul>
-								</section> -->
-
-							<!-- Photos -->
-								<!-- <section class="col-4 col-12-mobile">
-									<header>
-										<h2 class="icon solid fa-camera circled"><span class="label">Photos</span></h2>
-									</header>
-									<div class="row gtr-25">
-										<div class="col-6">
-											<a href="#" class="image fit"><img src="images/pic10.jpg" alt="" /></a>
-										</div>
-										<div class="col-6">
-											<a href="#" class="image fit"><img src="images/pic11.jpg" alt="" /></a>
-										</div>
-										<div class="col-6">
-											<a href="#" class="image fit"><img src="images/pic12.jpg" alt="" /></a>
-										</div>
-										<div class="col-6">
-											<a href="#" class="image fit"><img src="images/pic13.jpg" alt="" /></a>
-										</div>
-										<div class="col-6">
-											<a href="#" class="image fit"><img src="images/pic14.jpg" alt="" /></a>
-										</div>
-										<div class="col-6">
-											<a href="#" class="image fit"><img src="images/pic15.jpg" alt="" /></a>
-										</div>
-									</div>
-								</section> -->
-
-						<!-- </div> -->
-						<!-- <hr /> -->
-						<div class="row">
-							<div class="col-12">
-
-								<!-- Contact -->
-									<section class="contact">
-										<header>
-											<h3>Contact Information</h3>
-										</header>
-										<ul>
-											<li>
-												<h3>Address</h3>
-												<p>
-													Jorge Eduardo Gaspar Lara <br>
-													Department of Mathematics <br>
-													155 South 1400 East, LCB Loft <br>
-													University of Utah <br>
-													Salt Lake City, UT 84112-0090
-													<br>
-													
-												</p>
-											</li>
-											<li>
-												<h3>E-mail</h3>
-												<p>
-													j dot gaspar at utah dot edu
-													<br>
-													
-												</p>
-											</li>
-										</ul>
-										<ul class="icons">
-											<li><a href="https://www.linkedin.com/in/jorge-eduardo-gaspar-lara-98653225b/" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
-										</ul>
-									</section>
-								<!-- Copyright -->
-									<div class="copyright">
-										<ul class="menu">
-											<li>&copy; Jorge Eduardo Gaspar Lara. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-										</ul>
-									</div>
-
+							<div class="copyright">
+								<ul class="menu">
+									<li>&copy; Jorge Eduardo Gaspar Lara. All rights reserved.</li>
+									<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								</ul>
 							</div>
 
 						</div>
 					</div>
 				</div>
+			</div>
 
 		</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.dropotron.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
 	</body>
 </html>
+					
 
 
 
