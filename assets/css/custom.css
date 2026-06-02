@@ -1,6 +1,69 @@
+/*
+	Custom styles for Jorge Gaspar Lara's site
+	Centered navigation, compact academic layout, accessible colors.
+*/
+
+:root {
+	--page-bg: #ffffff;
+	--page-bg-soft: #f7f8fa;
+	--text: #1f2937;
+	--muted: #4b5563;
+	--heading: #111827;
+	--border: #d1d5db;
+	--accent: #0b5cad;
+	--accent-hover: #084a8b;
+	--accent-soft: #e7f1fb;
+	--nav-bg: #ffffff;
+	--nav-bg-soft: #f3f4f6;
+	--footer-bg: #f3f4f6;
+	--footer-text: #1f2937;
+	--shadow: 0 4px 14px rgba(17, 24, 39, 0.08);
+}
+
+html {
+	background: var(--page-bg);
+}
+
+body {
+	background: var(--page-bg);
+	color: var(--text);
+}
+
+p, li {
+	text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: var(--heading);
+}
+
+a {
+	color: var(--accent);
+	border-bottom: 1px solid rgba(11, 92, 173, 0.25);
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--accent-hover);
+	border-bottom-color: rgba(8, 74, 139, 0.5);
+}
+
+a:focus,
+a:focus-visible,
+button:focus,
+button:focus-visible,
+.button:focus,
+.button:focus-visible,
+.site-nav a:focus,
+.site-nav a:focus-visible {
+	outline: 3px solid var(--accent);
+	outline-offset: 3px;
+}
+
+/* Top bar */
 .site-topbar {
-	background: #ffffff;
-	border-bottom: 1px solid #d1d5db;
+	background: var(--nav-bg);
+	border-bottom: 1px solid var(--border);
 	padding: 1rem 0 0.75rem 0;
 }
 
@@ -20,16 +83,20 @@
 	display: inline-block;
 	font-size: 1.45rem;
 	font-weight: 700;
-	color: #111827;
+	color: var(--heading);
 	border-bottom: 0;
 	line-height: 1.2;
+}
+
+.site-name:hover {
+	color: var(--accent-hover);
 }
 
 .site-subtitle {
 	margin-top: 0.3rem;
 	font-size: 0.95rem;
 	line-height: 1.35;
-	color: #4b5563;
+	color: var(--muted);
 }
 
 .site-nav ul {
@@ -43,28 +110,59 @@
 	padding: 0;
 }
 
+.site-nav li {
+	margin: 0;
+	padding: 0;
+}
+
 .site-nav a {
 	display: inline-block;
 	padding: 0.35rem 0.65rem;
 	border: 0;
 	border-radius: 999px;
-	color: #1f2937;
+	color: var(--text);
 	font-weight: 600;
 }
 
 .site-nav a:hover {
-	background: #f3f4f6;
-	color: #084a8b;
+	background: var(--nav-bg-soft);
+	color: var(--accent-hover);
 }
 
 .site-nav .lang-toggle a {
-	background: #e7f1fb;
-	color: #0b5cad;
+	background: var(--accent-soft);
+	color: var(--accent);
+}
+
+.site-nav .lang-toggle a:hover {
+	background: #d7e9f8;
+	color: var(--accent-hover);
 }
 
 .site-nav .active-lang a {
-	background: #0b5cad;
+	background: var(--accent);
 	color: #ffffff;
+}
+
+.site-nav .active-lang a:hover {
+	background: var(--accent-hover);
+	color: #ffffff;
+}
+
+/* Main content */
+.wrapper {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+
+.wrapper.style2 {
+	padding-top: 0;
+}
+
+.content-wrap {
+	max-width: 980px;
+	margin: 0 auto;
+	padding: 1.8rem 1.25rem 1.25rem 1.25rem;
 }
 
 .bio-grid {
@@ -74,15 +172,15 @@
 }
 
 .photo-col {
-	flex: 0 0 155px;
+	flex: 0 0 210px;
 }
 
 .profile-photo {
-	width: 155px;
+	width: 210px;
 	height: auto;
 	display: block;
 	border-radius: 10px;
-	box-shadow: 0 4px 14px rgba(17, 24, 39, 0.08);
+	box-shadow: var(--shadow);
 }
 
 .bio-text {
@@ -90,6 +188,78 @@
 	min-width: 0;
 }
 
+.bio-text p {
+	margin: 0 0 0.8rem 0;
+	line-height: 1.65;
+}
+
+.lead {
+	font-size: 1.03rem;
+}
+
+.bio-text hr {
+	margin: 1rem 0;
+	border-top: 1px solid var(--border);
+	border-bottom: 0;
+	opacity: 1;
+}
+
+/* Footer */
+#footer {
+	background: var(--footer-bg);
+	color: var(--footer-text);
+	border-top: 1px solid var(--border);
+	padding: 2rem 0 2rem 0;
+}
+
+#footer h2, #footer h3, #footer h4, #footer h5, #footer h6 {
+	color: var(--heading);
+}
+
+#footer a {
+	color: var(--accent);
+	border-bottom-color: rgba(11, 92, 173, 0.25);
+}
+
+#footer a:hover {
+	color: var(--accent-hover);
+	border-bottom-color: rgba(8, 74, 139, 0.5);
+}
+
+.footer-contact {
+	text-align: center;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.footer-contact h3 {
+	margin-bottom: 0.75rem;
+}
+
+.footer-contact p {
+	text-align: center;
+	margin-bottom: 1rem;
+	line-height: 1.6;
+}
+
+.copyright {
+	margin-top: 1.25em;
+	color: var(--muted);
+	text-align: center;
+}
+
+.copyright a {
+	color: var(--accent);
+}
+
+/* Keep page compact */
+#features,
+#banner,
+#header {
+	display: none;
+}
+
+/* Responsive */
 @media screen and (max-width: 980px) {
 	.site-topbar-inner {
 		padding: 0 1rem;
@@ -105,19 +275,31 @@
 		gap: 1rem;
 	}
 
+	.photo-col {
+		flex: 0 0 auto;
+	}
+
 	.profile-photo {
-		width: 170px;
+		width: 190px;
 	}
 }
 
 @media screen and (max-width: 736px) {
+	.site-topbar {
+		padding: 0.85rem 0 0.7rem 0;
+	}
+
 	.site-nav a {
 		padding: 0.3rem 0.55rem;
 		font-size: 0.95rem;
 	}
 
+	.content-wrap {
+		padding: 1.2rem 1rem 1rem 1rem;
+	}
+
 	.profile-photo {
-		width: 145px;
+		width: 170px;
 	}
 }
 
@@ -131,6 +313,6 @@
 	}
 
 	.profile-photo {
-		width: 135px;
+		width: 150px;
 	}
 }
