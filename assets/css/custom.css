@@ -1,0 +1,84 @@
+.top-header {
+	background: url("../../images/pic06.jpg") center center / cover no-repeat;
+	position: relative;
+	padding: 2.5em 0 2em 0;
+}
+
+.top-header::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.45);
+}
+
+.top-header .inner {
+	position: relative;
+	z-index: 1;
+}
+
+.top-header #logo,
+.top-header .subtitle {
+	color: #fff;
+}
+
+.top-header .subtitle {
+	margin-top: 0.4em;
+	font-size: 0.95em;
+	opacity: 0.9;
+}
+
+.lang-nav {
+	display: flex;
+	gap: 1rem;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 1.5rem;
+}
+
+.lang-box {
+	display: block;
+	min-width: 220px;
+	padding: 1rem 1.25rem;
+	border-radius: 14px;
+	background: rgba(255, 255, 255, 0.92);
+	color: #222;
+	text-align: center;
+	text-decoration: none;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lang-box:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+.lang-title {
+	display: block;
+	font-size: 1.25rem;
+	font-weight: 700;
+}
+
+.lang-text {
+	display: block;
+	margin-top: 0.35rem;
+	font-size: 0.92rem;
+	opacity: 0.8;
+}
+
+.hero-strip {
+	height: 90px;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	background: transparent;
+}
+
+@media (max-width: 736px) {
+	.top-header {
+		padding: 2em 0 1.5em 0;
+	}
+
+	.lang-box {
+		min-width: 100%;
+	}
+}
