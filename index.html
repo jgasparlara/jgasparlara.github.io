@@ -12,145 +12,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="Homepage of Jorge Gaspar Lara, graduate student in mathematics at the University of Utah." />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-
-		<style>
-			:root {
-				--page-max: 1100px;
-			}
-
-			/* Keep the top compact */
-			#header {
-				padding-bottom: 0;
-			}
-
-			#logo {
-				font-size: 2rem;
-			}
-
-			.site-subtitle {
-				margin-top: 0.35em;
-				font-size: 0.95em;
-				opacity: 0.85;
-			}
-
-			/* Hero / bio area */
-			.hero-wrap {
-				max-width: var(--page-max);
-				margin: 0 auto;
-				padding: 2.5em 1.5em 1.5em 1.5em;
-			}
-
-			.hero-grid {
-				display: grid;
-				grid-template-columns: 280px 1fr;
-				gap: 2rem;
-				align-items: start;
-			}
-
-			.profile-photo {
-				width: 100%;
-				height: auto;
-				display: block;
-				border-radius: 14px;
-			}
-
-			.hero-bio p {
-				margin: 0 0 0.9em 0;
-			}
-
-			.bio-lead {
-				font-size: 1.05em;
-				line-height: 1.6;
-			}
-
-			/* Language cards */
-			.lang-section {
-				max-width: var(--page-max);
-				margin: 0 auto;
-				padding: 0 1.5em 2.5em 1.5em;
-			}
-
-			.lang-heading {
-				text-align: center;
-				margin-bottom: 1rem;
-				font-size: 1rem;
-				letter-spacing: 0.08em;
-				text-transform: uppercase;
-				opacity: 0.8;
-			}
-
-			.lang-grid {
-				display: grid;
-				grid-template-columns: 1fr 1fr;
-				gap: 1rem;
-			}
-
-			.lang-card {
-				display: block;
-				padding: 1.25rem 1.4rem;
-				border-radius: 14px;
-				background: rgba(255, 255, 255, 0.95);
-				text-decoration: none;
-				color: inherit;
-				text-align: center;
-				box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
-				transition: transform 0.15s ease, box-shadow 0.15s ease;
-			}
-
-			.lang-card:hover {
-				transform: translateY(-2px);
-				box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
-			}
-
-			.lang-title {
-				display: block;
-				font-size: 1.4rem;
-				font-weight: 700;
-				margin-bottom: 0.25rem;
-			}
-
-			.lang-text {
-				display: block;
-				font-size: 0.95rem;
-				opacity: 0.8;
-			}
-
-			/* Feature cards */
-			.feature-title {
-				margin-top: 0.6rem;
-				margin-bottom: 0.15rem;
-			}
-
-			.feature-subtitle {
-				margin-top: 0;
-				font-size: 0.95rem;
-				opacity: 0.8;
-			}
-
-			#features .image.featured img {
-				border-radius: 12px;
-			}
-
-			/* Footer */
-			.contact-compact ul {
-				margin-bottom: 0;
-			}
-
-			.contact-compact li {
-				margin-bottom: 1.2em;
-			}
-
-			@media (max-width: 980px) {
-				.hero-grid {
-					grid-template-columns: 1fr;
-				}
-
-				.lang-grid {
-					grid-template-columns: 1fr;
-				}
-			}
-		</style>
 	</head>
 
 	<body class="homepage is-preload">
@@ -159,18 +22,30 @@
 			<!-- Header -->
 			<div id="header">
 				<div class="inner">
-					<header>
+					<header class="site-header">
 						<h1><a href="index.html" id="logo">Jorge Gaspar Lara</a></h1>
 						<p class="site-subtitle">Graduate student in mathematics · Estudiante de posgrado en matemáticas</p>
 					</header>
 				</div>
 			</div>
 
+			<!-- Main navigation -->
+			<nav id="nav" aria-label="Main navigation">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="research.html">Research</a></li>
+					<li><a href="teaching.html">Teaching</a></li>
+					<li><a href="miscellaneous.html">Miscellaneous</a></li>
+					<li class="lang-toggle"><a href="index.html">EN</a></li>
+					<li class="lang-toggle"><a href="inicio.html">ES</a></li>
+				</ul>
+			</nav>
+
 			<!-- Main intro -->
 			<div class="wrapper style2">
 				<article class="container special hero-wrap">
 					<div class="hero-grid">
-						<div>
+						<div class="hero-photo">
 							<img src="images/pic06.jpg" alt="Portrait of Jorge Gaspar Lara" class="profile-photo" />
 						</div>
 
@@ -215,55 +90,6 @@
 						</div>
 					</div>
 				</article>
-			</div>
-
-			<!-- Language navigation -->
-			<div class="wrapper style1">
-				<section class="lang-section">
-					<div class="lang-heading">Choose a language</div>
-					<div class="lang-grid">
-						<a href="research.html" class="lang-card">
-							<span class="lang-title">English</span>
-							<span class="lang-text">Research, teaching, and miscellaneous pages</span>
-						</a>
-
-						<a href="investigacion.html" class="lang-card">
-							<span class="lang-title">Español</span>
-							<span class="lang-text">Investigación, enseñanza y otras cosas</span>
-						</a>
-					</div>
-				</section>
-			</div>
-
-			<!-- Features -->
-			<div class="wrapper style1">
-				<section id="features" class="container special">
-					<div class="row">
-						<article class="col-4 col-12-mobile special">
-							<a href="research.html" class="image featured"><img src="images/pic17.png" alt="Research" /></a>
-							<header>
-								<h3 class="feature-title"><a href="research.html">Research</a></h3>
-								<p class="feature-subtitle">Investigación</p>
-							</header>
-						</article>
-
-						<article class="col-4 col-12-mobile special">
-							<a href="teaching.html" class="image featured"><img src="images/pic18.png" alt="Teaching" /></a>
-							<header>
-								<h3 class="feature-title"><a href="teaching.html">Teaching</a></h3>
-								<p class="feature-subtitle">Enseñanza</p>
-							</header>
-						</article>
-
-						<article class="col-4 col-12-mobile special">
-							<a href="miscellaneous.html" class="image featured"><img src="images/pic20.png" alt="Miscellaneous" /></a>
-							<header>
-								<h3 class="feature-title"><a href="miscellaneous.html">Miscellaneous</a></h3>
-								<p class="feature-subtitle">Otras cosas</p>
-							</header>
-						</article>
-					</div>
-				</section>
 			</div>
 
 			<!-- Footer -->
