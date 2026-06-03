@@ -97,6 +97,8 @@ button:focus-visible,
 	font-size: 0.95rem;
 	line-height: 1.35;
 	color: var(--muted);
+	text-align: center;
+	width: 100%;
 }
 
 .site-nav ul {
