@@ -173,11 +173,11 @@ button:focus-visible,
 }
 
 .photo-col {
-	flex: 0 0 210px;
+	flex: 0 0 240px;
 }
 
 .profile-photo {
-	width: 210px;
+	width: 240px;
 	height: auto;
 	display: block;
 	border-radius: 10px;
