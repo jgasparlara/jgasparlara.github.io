@@ -316,4 +316,11 @@ button:focus-visible,
 	.profile-photo {
 		width: 150px;
 	}
+	/* Disable Helios mobile menu */
+
+#navButton,
+#navPanel,
+#titleBar {
+	display: none !important;
+}
 }
