@@ -337,6 +337,26 @@ button:focus-visible,
 	}
 }
 
+/* Disable Helios mobile navigation */
+
+#navButton,
+#navPanel,
+#titleBar {
+	display: none !important;
+}
+@media screen and (max-width: 736px) {
+
+	.site-nav {
+		display: block !important;
+	}
+
+	.site-nav ul {
+		display: flex !important;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+}
 /* Miscellaneous page */
 
 .cat-gallery {
