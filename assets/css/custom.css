@@ -335,6 +335,10 @@ button:focus-visible,
 	.profile-photo {
 		width: 170px;
 	}
+}
+
+/* Miscellaneous page */
+
 .cat-gallery {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -348,5 +352,4 @@ button:focus-visible,
 	height: auto;
 	border-radius: 10px;
 	box-shadow: var(--shadow);
-}
 }
