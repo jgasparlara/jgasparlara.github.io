@@ -191,6 +191,39 @@ button:focus-visible,
 	margin-top: 0;
 }
 
+/* Homepage bio layout */
+.bio-grid {
+	display: flex;
+	align-items: flex-start;
+	gap: 2rem;
+}
+
+.photo-col {
+	flex: 0 0 240px;
+}
+
+.profile-photo {
+	width: 240px;
+	height: auto;
+	display: block;
+	border-radius: 10px;
+	box-shadow: var(--shadow);
+}
+
+.bio-text {
+	flex: 1;
+	min-width: 0;
+}
+
+.bio-text p {
+	margin: 0 0 0.8rem 0;
+	line-height: 1.65;
+}
+
+.lead {
+	font-size: 1.03rem;
+}
+
 /* Footer */
 #footer {
 	background: var(--footer-bg);
@@ -255,6 +288,20 @@ button:focus-visible,
 	.site-name {
 		font-size: 1.35rem;
 	}
+
+	.bio-grid {
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.photo-col {
+		flex: 0 0 auto;
+	}
+
+	.profile-photo {
+		width: 220px;
+	}
 }
 
 @media screen and (max-width: 736px) {
@@ -270,6 +317,10 @@ button:focus-visible,
 	.content-wrap {
 		padding: 1.2rem 1rem 1rem 1rem;
 	}
+
+	.profile-photo {
+		width: 190px;
+	}
 }
 
 @media screen and (max-width: 480px) {
@@ -279,5 +330,9 @@ button:focus-visible,
 
 	.site-nav .lang-toggle a {
 		padding: 0.28rem 0.55rem;
+	}
+
+	.profile-photo {
+		width: 170px;
 	}
 }
