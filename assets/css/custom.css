@@ -76,28 +76,29 @@ button:focus-visible,
 }
 
 .site-brand {
-	text-align: center;
 	margin-bottom: 0.85rem;
 }
 
 .site-name {
-	display: block;
-	font-size: 1.75rem;
+	display: inline-block;
+	font-size: 1.45rem;
 	font-weight: 700;
 	color: var(--heading);
 	border-bottom: 0;
 	line-height: 1.2;
 }
 
+.site-name:hover {
+	color: var(--accent-hover);
+}
+
 .site-subtitle {
+	display: block;
 	margin-top: 0.3rem;
 	font-size: 0.95rem;
 	line-height: 1.35;
 	color: var(--muted);
-	text-align: center !important;
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
+	text-align: center;
 }
 
 .site-nav ul {
@@ -166,43 +167,28 @@ button:focus-visible,
 	padding: 1.8rem 1.25rem 1.25rem 1.25rem;
 }
 
-.bio-grid {
-	display: flex;
-	align-items: flex-start;
-	gap: 2rem;
+.content-wrap h2 {
+	text-align: center;
+	margin-bottom: 1.5rem;
 }
 
-.photo-col {
-	flex: 0 0 240px;
+.content-wrap h3 {
+	margin-top: 2rem;
+	margin-bottom: 0.75rem;
 }
 
-.profile-photo {
-	width: 240px;
-	height: auto;
-	display: block;
-	border-radius: 10px;
-	box-shadow: var(--shadow);
+.content-wrap ul {
+	margin-left: 1.5rem;
+	margin-bottom: 1.5rem;
 }
 
-.bio-text {
-	flex: 1;
-	min-width: 0;
+.content-wrap li {
+	margin-bottom: 0.75rem;
+	line-height: 1.6;
 }
 
-.bio-text p {
-	margin: 0 0 0.8rem 0;
-	line-height: 1.65;
-}
-
-.lead {
-	font-size: 1.03rem;
-}
-
-.bio-text hr {
-	margin: 1rem 0;
-	border-top: 1px solid var(--border);
-	border-bottom: 0;
-	opacity: 1;
+.content-wrap section:first-of-type h3 {
+	margin-top: 0;
 }
 
 /* Footer */
@@ -269,20 +255,6 @@ button:focus-visible,
 	.site-name {
 		font-size: 1.35rem;
 	}
-
-	.bio-grid {
-		flex-direction: column;
-		align-items: center;
-		gap: 1rem;
-	}
-
-	.photo-col {
-		flex: 0 0 auto;
-	}
-
-	.profile-photo {
-		width: 190px;
-	}
 }
 
 @media screen and (max-width: 736px) {
@@ -298,10 +270,6 @@ button:focus-visible,
 	.content-wrap {
 		padding: 1.2rem 1rem 1rem 1rem;
 	}
-
-	.profile-photo {
-		width: 170px;
-	}
 }
 
 @media screen and (max-width: 480px) {
@@ -312,15 +280,4 @@ button:focus-visible,
 	.site-nav .lang-toggle a {
 		padding: 0.28rem 0.55rem;
 	}
-
-	.profile-photo {
-		width: 150px;
-	}
-	/* Disable Helios mobile menu */
-
-#navButton,
-#navPanel,
-#titleBar {
-	display: none !important;
-}
 }
