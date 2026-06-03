@@ -335,4 +335,18 @@ button:focus-visible,
 	.profile-photo {
 		width: 170px;
 	}
+.cat-gallery {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+	gap: 1rem;
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+}
+
+.cat-gallery img {
+	width: 100%;
+	height: auto;
+	border-radius: 10px;
+	box-shadow: var(--shadow);
+}
 }
