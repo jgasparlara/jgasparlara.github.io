@@ -54,20 +54,20 @@ button:focus,
 button:focus-visible,
 .button:focus,
 .button:focus-visible,
-.site-nav a:focus,
-.site-nav a:focus-visible {
+.-nav a:focus,
+.-nav a:focus-visible {
 	outline: 3px solid var(--accent);
 	outline-offset: 3px;
 }
 
 /* Top bar */
-.site-topbar {
+.-topbar {
 	background: var(--nav-bg);
 	border-bottom: 1px solid var(--border);
 	padding: 1rem 0 0.75rem 0;
 }
 
-.site-topbar-inner {
+.-topbar-inner {
 	max-width: 1100px;
 	margin: 0 auto;
 	padding: 0 1.25rem;
@@ -75,11 +75,11 @@ button:focus-visible,
 	text-align: center;
 }
 
-.site-brand {
+.-brand {
 	margin-bottom: 0.85rem;
 }
 
-.site-name {
+.-name {
 	display: inline-block;
 	font-size: 1.45rem;
 	font-weight: 700;
@@ -88,11 +88,11 @@ button:focus-visible,
 	line-height: 1.2;
 }
 
-.site-name:hover {
+.-name:hover {
 	color: var(--accent-hover);
 }
 
-.site-subtitle {
+.-subtitle {
 	display: block;
 	margin-top: 0.3rem;
 	font-size: 0.95rem;
@@ -101,7 +101,7 @@ button:focus-visible,
 	text-align: center;
 }
 
-.site-nav ul {
+.-nav ul {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -112,12 +112,12 @@ button:focus-visible,
 	padding: 0;
 }
 
-.site-nav li {
+.-nav li {
 	margin: 0;
 	padding: 0;
 }
 
-.site-nav a {
+.-nav a {
 	display: inline-block;
 	padding: 0.35rem 0.65rem;
 	border: 0;
@@ -126,27 +126,27 @@ button:focus-visible,
 	font-weight: 600;
 }
 
-.site-nav a:hover {
+.-nav a:hover {
 	background: var(--nav-bg-soft);
 	color: var(--accent-hover);
 }
 
-.site-nav .lang-toggle a {
+.-nav .lang-toggle a {
 	background: var(--accent-soft);
 	color: var(--accent);
 }
 
-.site-nav .lang-toggle a:hover {
+.-nav .lang-toggle a:hover {
 	background: #d7e9f8;
 	color: var(--accent-hover);
 }
 
-.site-nav .active-lang a {
+.-nav .active-lang a {
 	background: var(--accent);
 	color: #ffffff;
 }
 
-.site-nav .active-lang a:hover {
+.-nav .active-lang a:hover {
 	background: var(--accent-hover);
 	color: #ffffff;
 }
@@ -281,11 +281,11 @@ button:focus-visible,
 
 /* Responsive */
 @media screen and (max-width: 980px) {
-	.site-topbar-inner {
+	.-topbar-inner {
 		padding: 0 1rem;
 	}
 
-	.site-name {
+	.-name {
 		font-size: 1.35rem;
 	}
 
@@ -305,7 +305,7 @@ button:focus-visible,
 }
 
 @media screen and (max-width: 736px) {
-	.site-topbar {
+	.-topbar {
 		padding: 0.85rem 0 0.7rem 0;
 	}
 
@@ -372,4 +372,11 @@ button:focus-visible,
 	height: auto;
 	border-radius: 10px;
 	box-shadow: var(--shadow);
+}
+.site-mark {
+	width: 40px;
+	height: 40px;
+	display: block;
+	margin: 0 auto 0.35rem auto;
+	border-radius: 50%;
 }
