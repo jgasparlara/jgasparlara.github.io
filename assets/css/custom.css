@@ -374,9 +374,3 @@ button:focus-visible,
 	box-shadow: var(--shadow);
 }
 
-.site-mark-inline {
-	width: 20px;
-	height: 20px;
-	margin-right: 0.35rem;
-	vertical-align: middle;
-}
